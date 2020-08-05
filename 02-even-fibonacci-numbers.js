@@ -12,8 +12,8 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 var fibo = [1];
 let sum = 0;
 //cria a sequencia de Fibonacci
-for(var i = 2; i < 4000000; i = i + fibo[fibo.length -2]) {
-	fibo.push(i)
+for (var i = 2; i < 4000000; i = i + fibo[fibo.length -2]) {
+	fibo.push(i);
 }
 
 //filtra a sequencia deixando apenas os numeros pares
