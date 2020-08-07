@@ -20,9 +20,37 @@ What is the value of the first triangle number to have over five hundred divisor
 
 */
 
-let sum = 0;
+// let numbers = [1];
+// let divisors;
 
-for (let i = 1; divisors.length < 10; i++) {
+// while (divisors != 500) {
+//     divisors = 0;
 
-	sum += i;
+//     triangleNumber = numbers.reduce((acc, cur) => {return acc+=cur},0);
+    
+
+//     for (let i = 1; i <= triangleNumber; i++) {
+        
+//         if (triangleNumber % i == 0) divisors++;
+//     }
+//     console.log(triangleNumber, divisors)
+//     numbers.push(numbers[numbers.length - 1] + 1);
+// }
+
+// console.log('result: ' + numbers.reduce((acc, cur) => {return acc+=cur},0))
+
+let triangleNumber = 0;
+let divisors = 0;
+
+for (let i = 1; divisors < 500 ; i++) {
+
+	divisors = 0;
+	triangleNumber += i;
+
+	for (let j = 1; j <= triangleNumber; j++) {
+		if (triangleNumber % j == 0) divisors++;
+	}
+	
 }
+
+console.log(triangleNumber)//76576500
