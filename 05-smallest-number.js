@@ -26,4 +26,4 @@ for (let i = 20, arr = []; i < Infinity; i+=2) {
     break;
 }
 
-console.log(result);
+console.log(result);//232792560

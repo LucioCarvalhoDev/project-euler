@@ -39,4 +39,4 @@ fac.forEach(function(numero){
 })
 
 //Mostra o maior divisor primo
-console.log(pri[pri.length - 1])
+console.log(pri[pri.length - 1])//6857

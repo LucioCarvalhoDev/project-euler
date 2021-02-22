@@ -50,4 +50,4 @@ for (let i = 0; i <= target.length -13; i++) {
 	}
 }
 
-console.log(Math.max(...products))
+console.log(Math.max(...products));//23514624000

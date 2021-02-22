@@ -34,4 +34,4 @@ numeros.forEach(function(item){
 palindromo = palindromo.sort(function(a, b) {
   return b - a;
 });
-console.log(palindromo[0])
+console.log(palindromo[0])//906609

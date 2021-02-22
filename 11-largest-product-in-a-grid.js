@@ -201,4 +201,6 @@ valorDiag2 = valorDiag2.filter(num => {
 
 maxDiag2 = Math.max(...valorDiag2)
 
-Math.max(maxDiag1,maxDiag2,maxDown,maxRight)
+const res = Math.max(maxDiag1,maxDiag2,maxDown,maxRight);
+
+console.log(res);//70600674

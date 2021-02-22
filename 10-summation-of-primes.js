@@ -29,4 +29,4 @@ for (let i = 3; i < 2000000; i += 2) {
 
 primes.forEach(prime => sum += prime)
 
-console.log(sum)
+console.log(sum)//142913828922

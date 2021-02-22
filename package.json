@@ -1,0 +1,23 @@
+{
+  "name": "project-euler",
+  "version": "1.0.0",
+  "description": "Compiled from my resolutions of the logical and mathematical problems indexed on the \"project euler\" site:",
+  "main": "01-multiples-of-3-and-5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucioCarvalhoDev/project-euler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucioCarvalhoDev/project-euler/issues"
+  },
+  "homepage": "https://github.com/LucioCarvalhoDev/project-euler#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

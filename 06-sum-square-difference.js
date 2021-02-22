@@ -28,4 +28,4 @@ squareOfSums = (squareOfSums.reduce((acc, cur) => {
 
 let result = squareOfSums - sumOfSquares;
 
-console.log(result)
+console.log(result)//25164150

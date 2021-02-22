@@ -21,4 +21,4 @@ fibo = fibo.filter(item => item % 2 ==0)
 
 //soma todos os itens
 fibo.forEach(item => sum = sum + item)
-console.log(sum)
+console.log(sum)//4613732

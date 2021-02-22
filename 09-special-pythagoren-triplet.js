@@ -54,4 +54,4 @@ for ( var i in result ) {
 	prod *= result[i];
 }
 
-alert("answer : " + prod);
+console.log(prod);//31875000

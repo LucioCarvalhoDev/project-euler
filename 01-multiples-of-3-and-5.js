@@ -26,7 +26,7 @@ while(number < 1000) {
 var soma = 0;
 multiple.forEach(item => soma+=item)
 
-console.log(soma)
+console.log(soma)//233168
 
 /*
 

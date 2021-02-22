@@ -25,7 +25,7 @@ for (let num = 3; prime.length < 10001; num += 2) {
 		}
 	}
 
-	if (fragPrime == true) {prime.push(num)}
+	if (fragPrime == true) prime.push(num);
 }
 
-console.log(prime[prime.length - 1])
+console.log(prime[prime.length - 1])//104743
