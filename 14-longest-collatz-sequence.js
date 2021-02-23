@@ -4,16 +4,19 @@ function collatz(n) {
     return (3*n)+1;
 }
 
-function collatzSequence(terms=[1]) {
-    if (terms[terms.length-1] == 1) return terms;
-    return collatzSequence(terms.concat(collatz(terms[terms.length-1])));
+let biggerCollatz = {generator: 1, numberOfTerms:1};
+
+for (let initial = 1; initial < 1000000; initial++) {
+    const terms = [initial];
+    while(terms[terms.length-1] !== 1) {
+        terms.push(collatz(terms[terms.length-1]));
+    }
+    
+    if (terms.length > biggerCollatz.numberOfTerms) {
+        biggerCollatz = {generator: initial, numberOfTerms: terms.length}
+    }
 }
 
-const numberOfTerms = [];
 
-for (let initial = 1; initial <= 1000000; initial++) {
-    numberOfTerms.push(collatzSequence([initial]).length);
-}
 
-// console.log(numberOfTerms);
-console.log(Math.max(...numberOfTerms));
+console.log(biggerCollatz);//{ generator: 837799, numberOfTerms: 525 }
