@@ -20,37 +20,66 @@ What is the value of the first triangle number to have over five hundred divisor
 
 */
 
-// let numbers = [1];
-// let divisors;
-
-// while (divisors != 500) {
-//     divisors = 0;
-
-//     triangleNumber = numbers.reduce((acc, cur) => {return acc+=cur},0);
-    
-
-//     for (let i = 1; i <= triangleNumber; i++) {
-        
-//         if (triangleNumber % i == 0) divisors++;
-//     }
-//     console.log(triangleNumber, divisors)
-//     numbers.push(numbers[numbers.length - 1] + 1);
-// }
-
-// console.log('result: ' + numbers.reduce((acc, cur) => {return acc+=cur},0))
-
-let triangleNumber = 0;
-let divisors = 0;
-
-for (let i = 1; divisors < 500 ; i++) {
-
-	divisors = 0;
-	triangleNumber += i;
-
-	for (let j = 1; j <= triangleNumber; j++) {
-		if (triangleNumber % j == 0) divisors++;
+function triangleNumber(number) {
+	let acc = 0;
+	while (number > 0) {
+		acc += number;
+		--number;
 	}
-	
+	return acc;
 }
 
-console.log(triangleNumber)//76576500
+function numberOfDivisors(number) {
+	let divisors = 1;
+	const isOdd = (number%2 !== 0);
+	
+	if (isOdd) {
+		for (let i = 1; i <= number/2; i+=2) {
+			if (number % i === 0) divisors++;
+		}
+	} else {
+		for (let i = 1; i <= number/2; i++) {
+		if (number % i === 0) divisors++;
+	}
+	}
+	return divisors;
+}
+
+function firstTriangularNumberToHaveOverNDivisors(n) {
+	for (let i = 1; ; i++) {
+		let tNumber = triangleNumber(i);
+		if (tNumber % 100 === 0) console.log(tNumber);
+		if (numberOfDivisors(tNumber) > n) break;
+	}
+	return tNumber;
+}
+// console.log(triangleNumber(100));
+// console.log(numberOfDivisors(28));
+// console.log(firstTriangularNumberToHaveOverNDivisors(1000));
+
+function fac(number) {
+	const factors = [];
+	let divisor = 2;
+	while (number != 1) {
+		const r = number / divisor;
+		if (r % 1 === 0) {
+			factors.push(divisor);
+			number = r;
+		} else {
+			divisor++;
+		}
+	}
+	return factors;
+}
+
+function getOccurence(arr, value) {
+	return (arr.filter(n => n === value)).length;
+}
+
+function expoentOfFactors(arr) {
+	const result = [];
+
+}
+
+console.log(getOccurence([1,1,3,3,4,1,9], 1));
+// console.log(fac(10))

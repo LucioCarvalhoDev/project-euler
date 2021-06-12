@@ -7,37 +7,18 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 */
 
-var number = 1;
-var multiple = [];
+let number = 1;
+let sumOfMultiples = 0;
 
 //Cria array com os multiplos
 while(number < 1000) {
-	if (number % 3 == 0) {
-		multiple.push(number)
-	}
-	if ( (number % 5 == 0) && (multiple[multiple.length - 1] != number) ) {
-		multiple.push(number)
+	if ((number % 3 == 0) || (number % 5 == 0)) {
+		sumOfMultiples += number;
 	}
 	number++
 }
 
 //Soma os multiplos
 
-var soma = 0;
-multiple.forEach(item => soma+=item)
+console.log(sumOfMultiples)//233168
 
-console.log(soma)//233168
-
-/*
-
-RESPOSTA DO SENSEI
-
-let sum = 0;
-for (let i = 0; i < 1000; i++) {
-	if ((i % 3 == 0) || (i % 5 == 0)) {
-	sum += i;
-	};
-};
-console.log(sum);
-	
-*/
