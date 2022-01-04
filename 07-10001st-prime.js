@@ -9,23 +9,23 @@ What is the 10001st prime number?
 
 
 let prime = [2]; //Lista com todos os numeros primos
-let fragPrime; //Booleano que indentifica se um numero é primo
+let flagPrime; //Booleano que indentifica se um numero é primo
 
 //Intera por todos os numeros impares
 for (let num = 3; prime.length < 10001; num += 2) {
 
-	fragPrime = true;
+	flagPrime = true;
 
 	//Verifica se é primo
 	for (let dvsr = Math.trunc(num/2); dvsr > 1; dvsr--) {
 
 		if (num % dvsr == 0) {
 			
-			fragPrime = false
+			flagPrime = false
 		}
 	}
 
-	if (fragPrime == true) prime.push(num);
+	if (flagPrime == true) prime.push(num);
 }
 
 console.log(prime[prime.length - 1])//104743
